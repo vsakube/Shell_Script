@@ -36,10 +36,8 @@ else
     echo "Lexicographic Unequal"
 fi
 
-str5="A quick brown fox"
-
 ############  For loop example
-
+str5="A quick brown fox"
 for s in $str5
 do
     echo $s
@@ -59,3 +57,14 @@ then
 else
     echo "Not Empty"
 fi
+
+################  Pipelining
+################  command1 | command2 | command3 ... means that output of command1 is passed as input to command2, and the output of command2 is passed as input to command3, and so on
+echo $(ls -l | grep .cpp | wc -l)
+
+################# command output storage
+files=$(ls -l)
+for f in $files
+do
+    echo $f
+done
