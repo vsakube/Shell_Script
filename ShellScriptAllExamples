@@ -1,0 +1,61 @@
+#!/bin/bash
+
+################# if else example and equality comparison examples
+n=91
+m=90
+if [ $n -lt 10 ] # for numbers -lt -gt -eq and for strings = < and > and -z for is empty and -n for is not empty
+then
+    echo $n
+else
+    echo $m
+fi
+
+str1="apple"
+str2="APPLE"
+str3="randomstring"
+str4="apple"
+
+if [ $str1 = $str2 ]
+then
+    echo "Lexicographic Equal"
+else
+    echo "Lexicographic Unequal"
+fi
+
+if [ $str1 = $str4 ] ############ similarly for lexicographic comparison < and > also work
+then
+    echo "Lexicographic Equal"
+else
+    echo "Lexicographic Unequal"
+fi
+
+if [ $str1 = $str3 ]
+then
+    echo "Lexicographic Equal"
+else
+    echo "Lexicographic Unequal"
+fi
+
+str5="A quick brown fox"
+
+############  For loop example
+
+for s in $str5
+do
+    echo $s
+done
+
+if [ -z $str1 ] # -z tests for is empty and -n tests for is not empty
+then
+    echo "Empty"
+else
+    echo "Not Empty"
+fi
+
+str6=""
+if [ -z $str6 ]
+then
+    echo "Empty"
+else
+    echo "Not Empty"
+fi
