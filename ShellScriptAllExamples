@@ -42,6 +42,11 @@ for s in $str5
 do
     echo $s
 done
+ ############  Another For loop example
+n=10;
+for (( i = 1; i <= n; i++ )) {
+    echo $i
+}
 
 if [ -z $str1 ] # -z tests for is empty and -n tests for is not empty
 then
