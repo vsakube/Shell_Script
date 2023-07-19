@@ -119,3 +119,15 @@ pid=$!
 echo $!
 #OR
 echo $PID
+
+############## Signal Handlers for Shell Scripts
+
+# Define a signal handler for SIGINT
+cleanup() {
+    echo "SIGINT received. Cleaning up..."
+    # Perform cleanup actions...
+    exit 0
+}
+
+# Set the signal handler
+trap cleanup SIGINT
