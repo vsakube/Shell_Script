@@ -68,3 +68,12 @@ for f in $files
 do
     echo $f
 done
+
+############## Create a command to be executed on the fly and execute and print the output
+cmd="ls -l | wc -l && echo \"evaled command executed\""
+
+output=$(eval "$cmd")
+echo $output
+
+########### or just execute directly without storing the output
+eval "$cmd"
