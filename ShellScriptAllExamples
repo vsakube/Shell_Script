@@ -131,3 +131,20 @@ cleanup() {
 
 # Set the signal handler
 trap cleanup SIGINT
+
+############## Built in Shell Script functions
+
+: << 'COMMENT'
+echo: Used to print text or variables to the standard output.
+cd: Used to change the current working directory.
+pwd: Prints the current working directory.
+read: Reads input from the user and stores it in a variable.
+export: Sets an environment variable for the current shell session or any child processes.
+unset: Removes an environment variable.
+source or .: Executes a script or file within the current shell environment.
+alias: Creates an alias for a command or set of commands.
+printf: A more advanced version of echo, allowing for formatted output.
+shift: Shifts the positional parameters (command-line arguments) to the left.
+eval: Evaluates and executes a command or expression.
+trap: Sets or clears a signal handler for specific events
+COMMENT
