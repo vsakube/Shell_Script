@@ -77,3 +77,38 @@ echo $output
 
 ########### or just execute directly without storing the output
 eval "$cmd"
+
+############## AWK awk 'pattern { action }' file.txt
+
+: << 'COMMENT'
+Awk provides several built-in variables that you can use in your awk commands:
+$0: Represents the entire input line.
+$1, $2, $3, ...: Represent the fields of the input line, separated by a specified delimiter (default is whitespace).
+NR: Represents the record (line) number.
+NF: Represents the number of fields in the current line.
+COMMENT
+
+cat file.txt | awk '{ print  $1, $2 $3 $4 }' file.txt
+echo "A Quick Brown Fox" | awk '{ print $1, $2 $3 $4}' file.txt
+
+awk '{
+    n = split($0, array, /!!/)
+    for (i = 1; i <= n; i++) {
+        print array[i]
+    }
+}' file.txt
+
+cat file.txt | awk '{
+    n = split($0, array, /!!/)
+    for (i = 1; i <= n; i++) {
+        print array[i]
+    }
+}'
+
+echo "A Quick Brown Fox" |  awk '{
+    n = split($0, array, /!!/)
+    for (i = 1; i <= n; i++) {
+        print array[i]
+    }
+}'
+
