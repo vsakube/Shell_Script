@@ -112,3 +112,10 @@ echo "A Quick Brown Fox" |  awk '{
     }
 }'
 
+##############  Execute a process in the background and get it's PID
+your_command &
+pid=$!
+
+echo $!
+#OR
+echo $PID
