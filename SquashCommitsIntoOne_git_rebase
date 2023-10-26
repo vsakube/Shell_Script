@@ -1,0 +1,13 @@
+// for latest N commits
+git rebase -i HEAD~N
+// Edit text as below
+pick 1234567 Commit message 1
+squash abcdefg Commit message 2
+squash hijklmn Commit message 3
+
+// Save and close the editor.
+// Another editor will open, allowing you to edit the commit message
+
+git push origin branch-name --force
+
+
